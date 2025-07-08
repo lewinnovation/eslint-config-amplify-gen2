@@ -15,7 +15,10 @@ export default [
   eslintConfigPrettier,
   {
     files: ["amplify/backend.ts", "**/resource.ts", "**/*.construct.ts"],
-    extends: [eslintCdkPlugin.configs.recommended],
+    ...eslintCdkPlugin.configs.recommended,
+  },
+  {
+    files: ["amplify/backend.ts", "**/resource.ts", "**/*.construct.ts"],
     rules: {
       "@typescript-eslint/no-unused-vars": 0,
     },
